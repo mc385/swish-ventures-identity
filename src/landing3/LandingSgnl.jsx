@@ -151,10 +151,12 @@ export default function LandingSgnl() {
     const scene = new THREE.Scene()
     scene.background = new THREE.Color(0x000000)
 
+    // Narrower viewports need camera further back so the mark fits; also reduce line count on mobile for performance.
+    const isMobile = window.innerWidth < 768
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100)
-    camera.position.set(0, 0, 4.2)
+    camera.position.set(0, 0, isMobile ? 5.2 : 4.2)
 
-    const positions = buildA15Wireframe(18000)
+    const positions = buildA15Wireframe(isMobile ? 9000 : 18000)
     const geometry = new THREE.BufferGeometry()
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
@@ -213,7 +215,9 @@ export default function LandingSgnl() {
     window.addEventListener('touchmove', onTouchMove, { passive: true })
 
     const onResize = () => {
+      const mobile = window.innerWidth < 768
       camera.aspect = window.innerWidth / window.innerHeight
+      camera.position.z = mobile ? 5.2 : 4.2
       camera.updateProjectionMatrix()
       renderer.setSize(window.innerWidth, window.innerHeight)
     }
@@ -273,7 +277,7 @@ export default function LandingSgnl() {
       <div ref={containerRef} style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }} />
 
       {/* Premium wordmark — Bodoni Moda, bottom center, only text on screen */}
-      <div style={{
+      <div className="sgnl-wordmark" style={{
         position: 'absolute',
         bottom: '8%',
         left: '50%',
@@ -283,24 +287,37 @@ export default function LandingSgnl() {
         textAlign: 'center',
         color: 'rgba(255,255,255,0.95)',
         textShadow: '0 0 30px rgba(0,0,0,0.75)',
+        width: 'max-content',
+        maxWidth: '92vw',
       }}>
-        <div style={{
+        <div className="sgnl-word" style={{
           fontFamily: "'Bodoni Moda', 'Didot', serif",
           fontWeight: 400,
           fontStyle: 'italic',
-          fontSize: 'clamp(1.6rem, 2.4vw, 2.6rem)',
+          fontSize: 'clamp(1.2rem, 2.4vw, 2.6rem)',
           letterSpacing: '0.28em',
           lineHeight: 1,
           textTransform: 'lowercase',
           fontVariationSettings: '"opsz" 96',
         }}>swish ventures</div>
-        <div style={{
+        <div className="sgnl-rule" style={{
           width: 42,
           height: 1,
           background: 'rgba(255,255,255,0.38)',
           margin: '22px auto 0',
         }} />
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .sgnl-wordmark { bottom: 10% !important; }
+          .sgnl-word { letter-spacing: 0.18em !important; font-size: 1.15rem !important; }
+          .sgnl-rule { width: 32px !important; margin: 16px auto 0 !important; }
+        }
+        @media (max-width: 420px) {
+          .sgnl-word { letter-spacing: 0.14em !important; font-size: 1rem !important; }
+        }
+      `}</style>
     </div>
   )
 }

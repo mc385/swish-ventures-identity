@@ -11,7 +11,6 @@ import ArchPlateExplorations from './archplate/ArchPlateExplorations.jsx'
 import Top5 from './finalists/Top5.jsx'
 import A15Brandbook from './a15brandbook/A15Brandbook.jsx'
 import LandingA15 from './landing/LandingA15.jsx'
-import LandingLiquid from './landing2/LandingLiquid.jsx'
 import LandingSgnl from './landing3/LandingSgnl.jsx'
 import A15Mono from './a15mono/A15Mono.jsx'
 
@@ -108,7 +107,6 @@ export default function App() {
           {(import.meta.env.PROD
             ? [
                 ['landing', '✦ Landing'],
-                ['landing2', '✦ Liquid'],
                 ['landing3', '✦ Sgnl'],
                 ['a15mono', '★ Mono Brandbook'],
                 ['a15book', 'A15 Brandbook'],
@@ -117,7 +115,6 @@ export default function App() {
               ]
             : [
                 ['landing', '✦ Landing'],
-                ['landing2', '✦ Liquid'],
                 ['landing3', '✦ Sgnl'],
                 ['a15mono', '★ Mono Brandbook'],
                 ['a15book', 'A15 Brandbook'],
@@ -152,7 +149,6 @@ export default function App() {
       </nav>
 
       {view === 'landing' && <LandingA15 />}
-      {view === 'landing2' && <LandingLiquid />}
       {view === 'landing3' && <LandingSgnl />}
       {view === 'a15mono' && <A15Mono />}
       {view === 'a15book' && <A15Brandbook />}
