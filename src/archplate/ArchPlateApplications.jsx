@@ -473,8 +473,8 @@ export default function ArchPlateApplications() {
           Four candidates, twelve contexts.
         </h2>
         <p style={{ color: '#5a564d', fontSize: 16, lineHeight: 1.6, marginTop: 20, maxWidth: 720 }}>
-          Aleg patru direcții puternice și le pun una lângă alta în fiecare context real. Compari direct și alegi.
-          Fiecare context are notă tehnică despre ce funcționează și ce nu.
+          Four strong directions, side by side in every real context. Compare directly and choose.
+          Each context has a technical note on what works and what doesn't.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 48 }}>
@@ -499,7 +499,7 @@ export default function ArchPlateApplications() {
         </div>
       </section>
 
-      <ApplicationsRow title="Print survival" kicker="Two-tone (master) · one-color (mono) · black (universal). Notă în josul cardului spune ce să eviți la print.">
+      <ApplicationsRow title="Print survival" kicker="Two-tone (master) · one-color (mono) · black (universal). The note at the bottom of each card flags what to avoid on press.">
         {CANDIDATES.map((c) => <PrintProof key={c.id} c={c} />)}
       </ApplicationsRow>
 
@@ -507,31 +507,31 @@ export default function ArchPlateApplications() {
         {CANDIDATES.map((c) => <BizCard key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Letterhead" kicker="A4 ivory, ink + gold. Vezi care variantă 'tine' un antet.">
+      <ApplicationsRow title="Letterhead" kicker="A4 ivory, ink + gold. See which variant truly carries a letterhead.">
         {CANDIDATES.map((c) => <Letterhead key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Pitch deck cover" kicker="16:9 plum, ivory + gold. Watermark mare în spate, mic pe header.">
+      <ApplicationsRow title="Pitch deck cover" kicker="16:9 plum, ivory + gold. Large watermark in the back, small in the header.">
         {CANDIDATES.map((c) => <SlideCover key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Office door" kicker="Sticlă mată, acid-etch în ink. Lumina trece prin desen.">
+      <ApplicationsRow title="Office door" kicker="Frosted glass, acid-etched in ink. Light passes through the drawing.">
         {CANDIDATES.map((c) => <OfficeDoor key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Brass plaque" kicker="60×40 mm, perete lobby. Engraved în brass — gradiente nu se reproduc.">
+      <ApplicationsRow title="Brass plaque" kicker="60×40 mm, lobby wall. Engraved in brass — gradients won't reproduce.">
         {CANDIDATES.map((c) => <Plaque key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="T-shirt · embroidery" kicker="Ivory thread pe plum, 50mm chest. Embroidery suprimă gradient & shading.">
+      <ApplicationsRow title="T-shirt · embroidery" kicker="Ivory thread on plum, 50mm chest. Embroidery suppresses gradient & shading.">
         {CANDIDATES.map((c) => <Tee key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Tote bag · screenprint" kicker="Sand canvas, ink + terracotta. Screenprint rezolvă bine ticks și hatching.">
+      <ApplicationsRow title="Tote bag · screenprint" kicker="Sand canvas, ink + terracotta. Screenprint handles ticks and hatching cleanly.">
         {CANDIDATES.map((c) => <Tote key={c.id} c={c} />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Email signature" kicker="Inline SVG, 42px mark. Cum citește în inbox la dimensiune mică.">
+      <ApplicationsRow title="Email signature" kicker="Inline SVG, 42px mark. How it reads inside an inbox at small size.">
         {CANDIDATES.map((c) => <EmailSig key={c.id} c={c} />)}
       </ApplicationsRow>
 
@@ -543,7 +543,7 @@ export default function ArchPlateApplications() {
         {CANDIDATES.map((c) => <WebHeader key={c.id} c={c} dark />)}
       </ApplicationsRow>
 
-      <ApplicationsRow title="Favicon strip · scale test" kicker="16 / 24 / 32 / 48 / 72 px. Cea mai grea probă: dacă ține la 16px, ține peste tot.">
+      <ApplicationsRow title="Favicon strip · scale test" kicker="16 / 24 / 32 / 48 / 72 px. The hardest test: if it holds at 16px, it holds everywhere.">
         {CANDIDATES.map((c) => <FaviconStrip key={c.id} c={c} />)}
       </ApplicationsRow>
 

@@ -27,15 +27,15 @@ const CANDIDATES = [
     tagline: 'The chosen direction.',
     why: 'Architectural rigor (V + S construction) sealed inside a sphere with a horizon line. Focal point at vertex = "the swish — the winning shot". Reads as object, premium, contemporary; supports print proofs from 16px favicon to brass plaque.',
     strengths: [
-      'Cel mai aproape de ideea "we help winners win" — bila + V + lumina la vârf = momentul golului',
-      'Object quality (gradient + shadow) → premium, "an artifact"',
-      'Equator-ul îi dă orizont fără să devină glob plin',
-      'Survives la print în versiunea single-color',
-      'Are deja showcase complet — deck, print, environmental, apparel',
+      'Closest match to "we help winners win" — sphere + V + light at vertex = the moment of the shot',
+      'Object quality (gradient + shadow) → premium, reads as an artifact',
+      'The equator gives it horizon without filling the sphere',
+      'Survives print in the single-color version',
+      'Has a complete application showcase — deck, print, environmental, apparel',
     ],
     weaknesses: [
-      'Mai detaliat decât Thrive',
-      'La favicon < 24px gradient-ul trebuie suprimat',
+      'More detailed than Thrive',
+      'Below 24px favicon, the gradient must be suppressed',
     ],
     scores: { trust: 9, premium: 10, oldMoney: 8, youngish: 8, vibe: 9, swish: 10, thrive: 6, print: 8, scale: 8, versatility: 9 },
     render: (size) => (
@@ -61,18 +61,18 @@ const CANDIDATES = [
     name: 'SV Lumina · Stacked',
     family: 'Brandbook champion',
     tagline: 'The polished one — already has a 23-chapter brandbook.',
-    why: 'Monogramă SV (V drept, vertex jos) cu sunburst hand-drawn și punct luminos auriu la vârful V-ului. Cel mai documentat și rafinat semn din toată sesiunea. Refinement editorial (Fraunces serif), feel de Thrive prin simplitate.',
+    why: 'SV monogram (upright V, vertex bottom) with hand-drawn sunburst and a gold luminous point at the V vertex. The most documented and refined mark of the whole session. Editorial refinement (Fraunces serif), Thrive-like simplicity.',
     strengths: [
-      'Are deja brandbook complet (23 capitole) și exporturi (SVG + PNG)',
-      'Most balanced: trust + premium + youngish toate prezente',
-      'Wordmark Fraunces îl poartă elegant la orice scară',
-      'Hand-drawn rays = mâna artistului = anti-corporate',
-      'Cea mai apropiată de Sequoia ca restraint',
+      'Already has a complete brandbook (23 chapters) and exports (SVG + PNG)',
+      'Most balanced: trust + premium + youngish all present',
+      'Fraunces wordmark carries it elegantly at any scale',
+      'Hand-drawn rays = the artist\'s hand = anti-corporate',
+      'Closest to Sequoia in restraint',
     ],
     weaknesses: [
-      'V-ul are vertex jos (lumina la bază, nu la "vârf") — mai puțin "winner moment"',
-      'Razele organice pot deveni greu de tipărit la dimensiuni mici',
-      'Mai puțin "object", mai mult "seal"',
+      'V vertex points down (light at the base, not at the "tip") — less "winner moment"',
+      'Organic rays can be difficult to print at small sizes',
+      'Less of an object, more of a seal',
     ],
     scores: { trust: 10, premium: 9, oldMoney: 9, youngish: 7, vibe: 8, swish: 8, thrive: 8, print: 7, scale: 9, versatility: 10 },
     render: (size) => (
@@ -98,18 +98,18 @@ const CANDIDATES = [
     name: 'D2 · Watch Face',
     family: 'Arch Plate',
     tagline: 'The instrument — disciplined, calibrated, eternal.',
-    why: 'Aceeași schelă (V răsturnat + S + ray + focal), dar 12 tick marks în jurul boundary-ului. Reads ca "instrument de precizie". Cel mai aproape de simplitatea Thrive. Best print survival din întreaga sesiune.',
+    why: 'Same skeleton (inverted V + S + ray + focal), with 12 tick marks around the boundary. Reads as a precision instrument. Closest to Thrive\'s simplicity. Best print survival of the whole session.',
     strengths: [
-      'Cea mai bună print survival — supraviețuiește totul (foil, embroidery, brass)',
-      'Cel mai "Thrive" prin restraint',
-      'Sens "discipline + time" se potrivește cu "long-term capital"',
-      'Citește bine la orice scară (până la 16px)',
-      'Cel mai "calm" — nu cere atenție, o primește',
+      'Best print survival — handles everything (foil, embroidery, brass)',
+      'Most Thrive-like in restraint',
+      'Discipline + time meaning fits long-term capital',
+      'Reads cleanly at any scale (down to 16px)',
+      'The calmest of the five — never demands attention, always earns it',
     ],
     weaknesses: [
-      'Mai puțin distinct decât A15',
-      'Pierde din "ball-ness" și "object-ness"',
-      'Nu spune literal "winning"',
+      'Less distinct than A15',
+      'Loses the ball / object quality',
+      'Does not literally say "winning"',
     ],
     scores: { trust: 9, premium: 7, oldMoney: 8, youngish: 7, vibe: 6, swish: 7, thrive: 9, print: 10, scale: 10, versatility: 9 },
     render: (size) => (
@@ -132,18 +132,18 @@ const CANDIDATES = [
     name: 'D12 · Coin (maximalist)',
     family: 'Arch Plate',
     tagline: 'The signet — old-money seal cut into a coin.',
-    why: 'Inele concentrice + 12 ticks + sphere shading + umbră. Cel mai "old-money signet" din sesiune. Pentru cover de raport anual, plachetă de perete, deck cover. Mai puțin pentru daily use.',
+    why: 'Concentric rings + 12 ticks + sphere shading + cast shadow. The most old-money signet of the session. For annual report covers, wall plaques, deck covers. Not for daily use.',
     strengths: [
-      'Cel mai "old money" / heraldic',
-      'Premium maximalist — pentru momente ceremoniale',
-      'Multiple straturi de detaliu: inele + ticks + gradient',
-      'Excelent ca "seal" pe covers și cover de deck',
+      'The most old-money / heraldic',
+      'Premium maximalist — built for ceremonial moments',
+      'Multiple layers of detail: rings + ticks + gradient',
+      'Excellent as a seal on covers and deck title pages',
     ],
     weaknesses: [
-      'Prea detaliat sub 32px',
-      'Pierde simplitatea Thrive',
-      'Mai puțin youngish',
-      'Funcționează ca "ceremonial mark", nu ca daily driver',
+      'Too detailed below 32px',
+      'Loses Thrive\'s simplicity',
+      'Less youngish',
+      'Works as a ceremonial mark, not a daily driver',
     ],
     scores: { trust: 9, premium: 10, oldMoney: 10, youngish: 5, vibe: 8, swish: 7, thrive: 4, print: 6, scale: 5, versatility: 6 },
     render: (size) => (
@@ -169,18 +169,18 @@ const CANDIDATES = [
     name: 'A6 · Pearl',
     family: 'Arch Plate · material study',
     tagline: 'The luxury — soft, distinct, premium.',
-    why: 'Bila cu pearl finish (cool gradient gri-perlat) + highlight subtil. Cel mai distinct material study. Soft luxury, premium fără să fie corporate. Pentru un brand care vrea să fie premium dar nu agresiv.',
+    why: 'The ball with a pearl finish (cool grey-pearl gradient) + a subtle highlight. The most distinct material study. Soft luxury — premium without being corporate. For a brand that wants to be premium but not aggressive.',
     strengths: [
-      'Cel mai distinct material — nu seamănă cu nimic generic',
-      'Soft luxury = "old money" fără să fie heavy',
-      'Foarte memorabil pe ecran',
-      'Variantă ideală pentru cover hero / hero web',
+      'The most distinct material — looks like nothing generic',
+      'Soft luxury = old-money without the weight',
+      'Very memorable on screen',
+      'Ideal for hero covers / hero web',
     ],
     weaknesses: [
-      'Pearl gradient nu se reproduce la print clasic',
-      'La favicon pierde tot caracterul',
-      'Mai feminin (în sensul brand-perception) — poate vrei sau nu',
-      'Cel mai puțin "winning shot"',
+      'Pearl gradient does not reproduce in classic print',
+      'Loses all character at favicon size',
+      'More feminine in brand perception — depends on intent',
+      'The least "winning shot"',
     ],
     scores: { trust: 8, premium: 10, oldMoney: 9, youngish: 8, vibe: 9, swish: 6, thrive: 5, print: 4, scale: 6, versatility: 6 },
     render: (size) => (
@@ -243,9 +243,10 @@ export default function Top5() {
         </h1>
 
         <p style={{ color: '#5a564d', fontSize: 17, lineHeight: 1.6, marginTop: 28, maxWidth: 720 }}>
-          Am analizat tot ce am construit împreună — sunburst seal-uri, dot &amp; arc-uri, compass rose, horizon, SV monograms,
-          SV Lumina, plachete arhitecturale, ball studies, watch faces, pearl, coin. Am selectat cele 5 care îndeplinesc
-          cele mai multe criterii: <em>trustworthy, premium, old-money, youngish, "winners win", Sequoia/a16z, Thrive simplicity</em>.
+          We reviewed everything built across the session — sunburst seals, dot &amp; arcs, compass roses, horizons,
+          SV monograms, SV Lumina, architectural plates, ball studies, watch faces, pearl, coin. We selected the five
+          that meet the most criteria: <em>trustworthy, premium, old-money, youngish, "winners win", Sequoia/a16z,
+          Thrive simplicity</em>.
         </p>
       </section>
 
@@ -278,13 +279,13 @@ export default function Top5() {
               <em style={{ fontStyle: 'italic', color: C.GOLD }}>A15</em> — Ball + equator + focal +9.
             </h2>
             <p style={{ fontSize: 16, color: 'rgba(251,248,240,0.78)', lineHeight: 1.65, marginTop: 22, maxWidth: 600 }}>
-              E singurul care satisface toate criteriile simultan. Construcția arhitecturală (V + S) îi dă <strong style={{ color: C.IVORY }}>trust</strong>.
-              Bila cu gradient îi dă <strong style={{ color: C.IVORY }}>premium / old-money</strong>. Equator-ul îi dă <strong style={{ color: C.IVORY }}>vibe</strong>.
-              Focal point-ul la vârful V-ului spune literal <strong style={{ color: C.IVORY }}>"the swish — the winning shot"</strong>.
-              Și pentru că e construit din primitives matematice, scaleazul coboară până la favicon și urcă până la poster.
+              The only one that satisfies every criterion at once. The architectural construction (V + S) gives it <strong style={{ color: C.IVORY }}>trust</strong>.
+              The gradient sphere gives it <strong style={{ color: C.IVORY }}>premium / old-money</strong>. The equator gives it <strong style={{ color: C.IVORY }}>vibe</strong>.
+              The focal point at the V vertex literally says <strong style={{ color: C.IVORY }}>"the swish — the winning shot"</strong>.
+              And because it is built from mathematical primitives, it scales down to favicon and up to poster.
             </p>
             <p style={{ fontSize: 14, color: 'rgba(251,248,240,0.6)', lineHeight: 1.6, marginTop: 14, fontStyle: 'italic' }}>
-              Backup option: <strong style={{ fontStyle: 'normal', color: C.IVORY }}>SV Lumina (#2)</strong> — dacă vrei mai mult Sequoia restraint și mai puțin "object". Are deja brandbook complet.
+              Backup option: <strong style={{ fontStyle: 'normal', color: C.IVORY }}>SV Lumina (#2)</strong> — if you want more Sequoia restraint and less "object". Already has a complete brandbook.
             </p>
           </div>
         </div>
@@ -399,8 +400,8 @@ export default function Top5() {
             10 criteria, scored 1–10.
           </h2>
           <p style={{ color: '#5a564d', fontSize: 14, lineHeight: 1.6, marginTop: 12, maxWidth: 640 }}>
-            Note subiective, dar bazate pe principiile pe care le-ai stabilit pe parcursul sesiunii.
-            Total = sumă pe 100. Diferențele mici (sub 5 puncte) sunt în plaja erorii.
+            Subjective scores, grounded in the principles set across the session.
+            Total = sum out of 100. Differences under 5 points fall within the margin of error.
           </p>
         </div>
 
@@ -464,8 +465,8 @@ export default function Top5() {
           A15. Build the brandbook around the ball. Ship it.
         </h2>
         <p style={{ color: '#5a564d', fontSize: 16, lineHeight: 1.65, maxWidth: 620, margin: '0 auto' }}>
-          Dacă alegi A15, pot să-l integrez în brandbook (înlocuiesc SV Lumina ca champion), să regenerez exporturile (toate variantele SVG + PNG la 512/1024/2048),
-          și să rescriu showcase-ul ca brandbook v2.
+          If you go with A15, the next steps are: integrate it as the brandbook champion (replacing SV Lumina),
+          regenerate all SVG + PNG exports at 512 / 1024 / 2048, and rewrite the showcase as brandbook v2.
         </p>
       </section>
     </div>

@@ -437,12 +437,16 @@ export default function LandingA15() {
 
     const assembleTimer = setTimeout(() => { targetProgress = 1.0 }, 700)
 
-    const onMouseMove = (event) => {
-      targetMouse.x = (event.clientX / window.innerWidth) * 2 - 1
-      targetMouse.y = -(event.clientY / window.innerHeight) * 2 + 1
-      // Mouse no longer triggers progress — logo holds shape on its own.
+    const setPointer = (x, y) => {
+      targetMouse.x = (x / window.innerWidth) * 2 - 1
+      targetMouse.y = -(y / window.innerHeight) * 2 + 1
+    }
+    const onMouseMove = (event) => setPointer(event.clientX, event.clientY)
+    const onTouchMove = (event) => {
+      if (event.touches.length > 0) setPointer(event.touches[0].clientX, event.touches[0].clientY)
     }
     window.addEventListener('mousemove', onMouseMove)
+    window.addEventListener('touchmove', onTouchMove, { passive: true })
 
     const onResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight
@@ -527,6 +531,7 @@ export default function LandingA15() {
       if (raf) cancelAnimationFrame(raf)
       if (assembleTimer) clearTimeout(assembleTimer)
       window.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('touchmove', onTouchMove)
       window.removeEventListener('click', onClick)
       window.removeEventListener('resize', onResize)
       geometry.dispose()

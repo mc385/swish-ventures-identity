@@ -547,11 +547,11 @@ export default function A15Showcase() {
         <h2 style={{ fontFamily: "'Fraunces', serif", fontWeight: 300, fontSize: 64, letterSpacing: -2.2, margin: 0, lineHeight: 1, color: '#1a1a1a' }}>
           Ball + equator,
           <br />
-          <em style={{ fontStyle: 'italic', color: C.INK_BLUE }}>focal point un pic mai mare.</em>
+          <em style={{ fontStyle: 'italic', color: C.INK_BLUE }}>focal point a touch larger.</em>
         </h2>
         <p style={{ color: '#5a564d', fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: 720 }}>
-          Punctul luminos crescut subtil de la 5 → 9 unități. Acum se vede fără să devină dominant.
-          Mai jos găsești semnul aplicat pe 8 background-uri brand, plus deck, print, environmental, apparel, digital.
+          The luminous point bumped subtly from 5 → 9 units. Now visible without becoming dominant.
+          Below: the mark applied across 8 brand surfaces, plus deck, print, environmental, apparel, digital.
         </p>
 
         <div style={{ display: 'flex', justifyContent: 'center', padding: '60px 0 40px' }}>
@@ -564,8 +564,8 @@ export default function A15Showcase() {
       {/* Backgrounds */}
       <Section
         label="01 · Surfaces"
-        title="Pe 8 backgrounds brand"
-        kicker="Aceeași bilă, 8 surface-uri sancționate. Fiecare cu ink + accent calibrate."
+        title="On 8 brand surfaces"
+        kicker="Same ball, 8 sanctioned surfaces. Each with ink + accent tuned."
       >
         <Grid cols={4} gap={20}>
           <SurfaceTile bg={C.PAPER} surface="paper" label="Paper" hex="#fdfdfc" />
@@ -582,8 +582,8 @@ export default function A15Showcase() {
       {/* Deck */}
       <Section
         label="02 · Pitch deck"
-        title="Cum trăiește în deck"
-        kicker="Trei slide-uri reale: cover (plum), content (paper), pull-quote (ink). Bila funcționează ca element de identitate la toate scalele — 460px ca watermark, 32px în corner."
+        title="How it lives in the deck"
+        kicker="Three real slides: cover (plum), content (paper), pull-quote (ink). The ball works as an identity element at every scale — 460px as watermark, 32px in the corner."
       >
         <Grid cols={1} gap={28}>
           <SlideCover />
@@ -595,8 +595,8 @@ export default function A15Showcase() {
       {/* Stationery */}
       <Section
         label="03 · Stationery"
-        title="Letterhead, business card, plic"
-        kicker="Pe ivory + cream. Bila respiră bine în spațiul alb al unei scrisori, condensată dar intactă pe carte de vizită."
+        title="Letterhead, business card, envelope"
+        kicker="On ivory + cream. The ball breathes in the white space of a letter, condensed but intact on a business card."
         bg={C.SAND}
       >
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40 }}>
@@ -612,8 +612,8 @@ export default function A15Showcase() {
       {/* Print proofs */}
       <Section
         label="04 · Print survival"
-        title="Cum se comportă la presă"
-        kicker="Two-tone (ink + gold) e master. Single-color rezistă datorită equator-ului. Foil pe negru e cea mai dramatică reproducere."
+        title="How it behaves on press"
+        kicker="Two-tone (ink + gold) is the master. Single-color holds up thanks to the equator. Foil on black is the most dramatic reproduction."
         bg={C.CREAM}
       >
         <Grid cols={4} gap={20}>
@@ -625,7 +625,7 @@ export default function A15Showcase() {
           <PrintProof paper={C.INK_BLUE} ink={C.IVORY} mono label="Reverse · ink-out" />
           <div>
             <GoldFoilCard />
-            <Caption>Gold foil pe black</Caption>
+            <Caption>Gold foil on black</Caption>
           </div>
           <PrintProof paper={C.PLUM} ink={C.IVORY} label="Plum · ivory + gold" />
         </Grid>
@@ -636,7 +636,7 @@ export default function A15Showcase() {
         label="05 · Environmental"
         dark
         title="Door & plaque"
-        kicker="Acid-etch pe sticlă mată: equator-ul devine literal o linie de orizont. Brass plaque la 60mm — equator + V citesc clar de la 5m."
+        kicker="Acid-etched on frosted glass: the equator literally becomes a horizon line. Brass plaque at 60mm — equator + V read clearly from 5m."
       >
         <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 28 }}>
           <div>
@@ -653,8 +653,8 @@ export default function A15Showcase() {
       {/* Apparel */}
       <Section
         label="06 · Apparel"
-        title="Tricouri & tote bags"
-        kicker="Embroidery suprimă gradient — equator + V + S + ray sunt elementele care supraviețuiesc, ce le trebuie."
+        title="Tees & tote bags"
+        kicker="Embroidery suppresses the gradient — equator + V + S + ray are the elements that survive, exactly what's needed."
       >
         <Grid cols={3}>
           <div>
@@ -688,7 +688,7 @@ export default function A15Showcase() {
       <Section
         label="07 · Digital"
         title="Email, web, favicon"
-        kicker="Pe ecran avem luxul gradientului. La 16px îl scoatem automat — echivalentul unei alte bile."
+        kicker="On screen we get the luxury of the gradient. At 16px we drop it automatically — effectively a different ball."
       >
         <Grid cols={2} gap={40}>
           <div>
@@ -704,7 +704,7 @@ export default function A15Showcase() {
         </Grid>
         <div style={{ marginTop: 32 }}>
           <FaviconStrip />
-          <Caption>Favicon strip · 16 / 24 / 32 / 48 / 72 / 128 px (gradient se activează ≥ 48px)</Caption>
+          <Caption>Favicon strip · 16 / 24 / 32 / 48 / 72 / 128 px (gradient activates at ≥ 48px)</Caption>
         </div>
       </Section>
 
@@ -719,11 +719,11 @@ export default function A15Showcase() {
               Verdict
             </div>
             <h2 style={{ fontFamily: "'Fraunces', serif", fontWeight: 300, fontSize: 44, letterSpacing: -1.4, lineHeight: 1.1, margin: 0, color: C.IVORY }}>
-              A15 — equator-ul îi dă orizont, focal point-ul mai mare îi dă greutate.
+              A15 — the equator gives it horizon, the larger focal point gives it weight.
             </h2>
             <p style={{ fontSize: 15, color: 'rgba(251,248,240,0.75)', lineHeight: 1.6, marginTop: 18, maxWidth: 560 }}>
-              Combinația dintre cele două ține peste tot — de la favicon la plachetă brass.
-              Spune-mi dacă te-am convins ori dacă mai vrei un ajustaj (focal +1 / -1, equator dashed, etc.).
+              The combination of the two holds across every context — from favicon to brass plaque.
+              Adjustments still possible (focal +1 / -1, dashed equator, etc.).
             </p>
           </div>
         </div>

@@ -11,6 +11,10 @@ import ArchPlateExplorations from './archplate/ArchPlateExplorations.jsx'
 import Top5 from './finalists/Top5.jsx'
 import A15Brandbook from './a15brandbook/A15Brandbook.jsx'
 import LandingA15 from './landing/LandingA15.jsx'
+import LandingLiquid from './landing2/LandingLiquid.jsx'
+import LandingSgnl from './landing3/LandingSgnl.jsx'
+import LandingPixel from './landing4/LandingPixel.jsx'
+import A15Mono from './a15mono/A15Mono.jsx'
 
 // Brand colors
 const INK_PURPLE_DEEP = '#390067' // royal / premium
@@ -97,21 +101,37 @@ export default function App() {
 
   return (
     <div>
-      <nav style={{ position: 'sticky', top: 0, zIndex: 100, background: 'rgba(253, 253, 252, 0.92)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #eceae3', padding: '14px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ fontFamily: 'Inter', fontSize: 11, letterSpacing: 4, textTransform: 'uppercase', color: '#8a8578' }}>
-          Swish Ventures · Identity
+      <nav style={{ position: 'sticky', top: 0, zIndex: 100, background: 'rgba(253, 253, 252, 0.92)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #eceae3', padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div style={{ fontFamily: 'Inter', fontSize: 11, letterSpacing: 4, textTransform: 'uppercase', color: '#8a8578', flexShrink: 0 }}>
+          Swish · Identity
         </div>
-        <div style={{ display: 'flex', gap: 4 }}>
-          {[
-            ['landing', '✦ Landing'],
-            ['a15book', 'A15 Brandbook'],
-            ['top5', 'Top 5'],
-            ['archplate', 'Arch Plate'],
-            ['brandbook', 'Brandbook (v1)'],
-            ['catalog', 'Catalog'],
-            ['exports', 'Exports'],
-            ['explorations', 'Archive'],
-          ].map(([id, label]) => (
+        <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
+          {(import.meta.env.PROD
+            ? [
+                ['landing', '✦ Landing'],
+                ['landing2', '✦ Liquid'],
+                ['landing3', '✦ Sgnl'],
+                ['landing4', '✦ Pixel'],
+                ['a15mono', '★ Mono Brandbook'],
+                ['a15book', 'A15 Brandbook'],
+                ['top5', 'Top 5'],
+                ['archplate', 'Arch Plate'],
+              ]
+            : [
+                ['landing', '✦ Landing'],
+                ['landing2', '✦ Liquid'],
+                ['landing3', '✦ Sgnl'],
+                ['landing4', '✦ Pixel'],
+                ['a15mono', '★ Mono Brandbook'],
+                ['a15book', 'A15 Brandbook'],
+                ['top5', 'Top 5'],
+                ['archplate', 'Arch Plate'],
+                ['catalog', 'Catalog'],
+                ['brandbook', 'Brandbook (v1)'],
+                ['exports', 'Exports'],
+                ['explorations', 'Archive'],
+              ]
+          ).map(([id, label]) => (
             <button
               key={id}
               onClick={() => setView(id)}
@@ -135,6 +155,10 @@ export default function App() {
       </nav>
 
       {view === 'landing' && <LandingA15 />}
+      {view === 'landing2' && <LandingLiquid />}
+      {view === 'landing3' && <LandingSgnl />}
+      {view === 'landing4' && <LandingPixel />}
+      {view === 'a15mono' && <A15Mono />}
       {view === 'a15book' && <A15Brandbook />}
       {view === 'top5' && <Top5 />}
       {view === 'archplate' && <ArchPlateExplorations />}

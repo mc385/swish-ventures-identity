@@ -304,35 +304,35 @@ export default function ArchPlateExplorations() {
           <em style={{ fontStyle: 'italic', color: C.INK_BLUE }}>Light cascades.</em>
         </h1>
         <p style={{ color: '#5a564d', fontSize: 17, lineHeight: 1.6, marginTop: 24, maxWidth: 720 }}>
-          În loc de V cu vertex jos care primește lumina, V-ul e răsturnat: vertexul sus, razele cad în jos
-          ca apa peste o stâncă. S-ul curge prin compoziție. Încadrat într-o plachetă arhitecturală —
-          ca un desen tehnic de secol XIX, dar în paleta Swish.
+          Instead of a V whose vertex receives the light from below, the V is inverted: vertex on top,
+          rays cascading downward like water over a rock. The S flows through the composition. Framed in an
+          architectural plate — a 19th-century technical drawing, drawn in the Swish palette.
         </p>
       </header>
 
       {/* ====== CORE MARKS ====== */}
       <Section
-        label="Rafinare · 01"
-        title="Core marks — 6 palete"
-        subtitle="Doar semnul, fără placheta. Pentru folosință curentă ca logo."
+        label="Refinement · 01"
+        title="Core marks — 6 palettes"
+        subtitle="The mark alone, without the plate. For everyday use as a logo."
       >
         <Grid cols={3}>
-          <Card bg={C.PAPER} label="M1 · Black · primary" note="Cea mai aproape de sursa arhitecturală.">
+          <Card bg={C.PAPER} label="M1 · Black · primary" note="Closest to the architectural source.">
             <ArchMark size={280} ink={C.INK_BLACK} accent={C.INK_BLACK} />
           </Card>
-          <Card bg={C.PAPER} label="M2 · Ink Blue-Purple + Gold" note="Paleta Swish pe cadru arhitectural.">
+          <Card bg={C.PAPER} label="M2 · Ink Blue-Purple + Gold" note="Swish palette on the architectural frame.">
             <ArchMark size={280} ink={C.INK_BLUE} accent={C.GOLD} />
           </Card>
-          <Card bg={C.PAPER} label="M3 · Royal Purple" note="Pe paleta cea mai saturată.">
+          <Card bg={C.PAPER} label="M3 · Royal Purple" note="The most saturated palette.">
             <ArchMark size={280} ink={C.INK_DEEP} accent={C.GOLD} />
           </Card>
-          <Card bg={C.CREAM} label="M4 · Ink + Gold pe cream" note="Hârtie caldă + ink rece.">
+          <Card bg={C.CREAM} label="M4 · Ink + Gold on cream" note="Warm paper, cool ink.">
             <ArchMark size={280} ink={C.INK_BLUE} accent={C.GOLD} />
           </Card>
-          <Card bg={C.SAND} label="M5 · Ink + Terracotta pe sand" note="Paleta editorial.">
+          <Card bg={C.SAND} label="M5 · Ink + Terracotta on sand" note="Editorial palette.">
             <ArchMark size={280} ink={C.INK_DEEP} accent={C.TERRA} />
           </Card>
-          <Card bg={C.PLUM} label="M6 · Ivory + Gold pe plum" note="Varianta premium / deck.">
+          <Card bg={C.PLUM} label="M6 · Ivory + Gold on plum" note="Premium / deck variant.">
             <ArchMark size={280} ink={C.IVORY} accent={C.GOLD} />
           </Card>
         </Grid>
@@ -340,16 +340,16 @@ export default function ArchPlateExplorations() {
 
       {/* ====== BALL FEEL — new refinement ====== */}
       <Section
-        label="★ Rafinare nouă · 06"
-        title="Ball feel — mai multă masă, mai multă prezență"
-        subtitle="Linii ușor mai groase, opțional tint interior, umbrire sferică, highlight top-left, umbră de bază. Progresie subtilă → pronunțată."
+        label="★ New refinement · 06"
+        title="Ball feel — more mass, more presence"
+        subtitle="Slightly thicker strokes, optional inner tint, sphere shading, top-left highlight, ground shadow. Subtle → pronounced progression."
       >
         <Grid cols={3}>
-          <Card bg={C.PAPER} label="B0 · Reference (the original)" note="Fără modificări — comparație.">
+          <Card bg={C.PAPER} label="B0 · Reference (the original)" note="No changes — comparison.">
             <ArchMark size={280} ink={C.INK_BLUE} accent={C.GOLD} />
           </Card>
 
-          <Card bg={C.PAPER} label="B1 · Linii ușor mai groase" note="strokeV/S 3.4 · boundary 2.2 — subtle bump, imediat mai 'present'.">
+          <Card bg={C.PAPER} label="B1 · Slightly thicker lines" note="strokeV/S 3.4 · boundary 2.2 — subtle bump, immediately more present.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -360,7 +360,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="B2 · + tint interior subtil" note="Bilă cu corp luminos — fill rgba(58,48,140,0.05).">
+          <Card bg={C.PAPER} label="B2 · + subtle inner tint" note="Ball with a luminous body — fill rgba(58,48,140,0.05).">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -372,7 +372,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="B3 · + umbrire sferică" note="Radial gradient top-left → bottom-right. Începe să arate ca o bilă reală.">
+          <Card bg={C.PAPER} label="B3 · + sphere shading" note="Radial gradient top-left → bottom-right. Starts to read as a real sphere.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -384,7 +384,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="B4 · + highlight (billiard)" note="Mic punct luminos sus-stânga — trickul clasic al bilei de biliard.">
+          <Card bg={C.PAPER} label="B4 · + highlight (billiard)" note="Small bright spot top-left — the classic billiard-ball trick.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -397,7 +397,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="B5 · + umbră de bază" note="Elipsă difuză sub bilă — adaugă greutate, semn că bila stă pe ceva.">
+          <Card bg={C.PAPER} label="B5 · + ground shadow" note="Soft ellipse beneath — adds weight, a sense the ball sits on something.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -411,7 +411,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="B6 · + V triangle masă" note="Triunghiul V plin cu fill 8% — V-ul devine forma dominantă.">
+          <Card bg={C.PAPER} label="B6 · + V triangle mass" note="V triangle filled at 8% — V becomes the dominant shape.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -427,7 +427,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.CREAM} label="B7 · Full ball pe cream" note="Toate pe cream — combinația mea favorită din această familie.">
+          <Card bg={C.CREAM} label="B7 · Full ball on cream" note="Everything on cream — favourite combination of this family.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -441,7 +441,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PLUM} label="B8 · Full ball pe plum (dark)" note="Pe plum închis — bila luminează cu adevărat.">
+          <Card bg={C.PLUM} label="B8 · Full ball on plum (dark)" note="On dark plum the ball truly glows.">
             <ArchMark
               size={280}
               ink={C.IVORY}
@@ -459,9 +459,9 @@ export default function ArchPlateExplorations() {
 
       {/* ====== BALL — palettes ====== */}
       <Section
-        label="★ Rafinare nouă · 07"
-        title="Ball — toate paletele"
-        subtitle="Versiunea full ball (B5) aplicată în paleta brandului, ca să decizi care surface o ține cel mai bine."
+        label="★ New refinement · 07"
+        title="Ball — every palette"
+        subtitle="The full ball variant (B5) applied across the brand palette — to see which surface holds it best."
       >
         <Grid cols={3}>
           <Card bg={C.PAPER} label="BP1 · Royal Purple + Gold">
@@ -547,12 +547,12 @@ export default function ArchPlateExplorations() {
 
       {/* ====== OTHER DIRECTIONS — Rafinare 08 ====== */}
       <Section
-        label="★★ Rafinare nouă · 08"
-        title="8 direcții — fiecare un alt vibe"
-        subtitle="Aceeași oasă a semnului (V răsturnat + S + ray + lumină), dar fiecare variantă împinge într-o metaforă diferită — globe, watch, vinyl, pearl, gold, lens, engraved, wax seal."
+        label="★★ New refinement · 08"
+        title="8 directions — each a different vibe"
+        subtitle="Same skeleton (inverted V + S + ray + light), but each variant pushes into a different metaphor — globe, watch, vinyl, pearl, gold, lens, engraved, wax seal."
       >
         <Grid cols={3}>
-          <Card bg={C.PAPER} label="D1 · Globe" note="Linii de paralelă/meridian — semnul devine glob. Sens 'international VC'.">
+          <Card bg={C.PAPER} label="D1 · Globe" note="Latitude / meridian lines — the mark becomes a globe. Reads as 'international VC'.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -565,7 +565,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="D2 · Watch face" note="12 tick marks în jurul boundary-ului. Precizie, timp, disciplină.">
+          <Card bg={C.PAPER} label="D2 · Watch face" note="12 tick marks around the boundary. Precision, time, discipline.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -577,7 +577,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="D3 · Watch · 60 ticks" note="Fin — ca pe un cronometru de capital.">
+          <Card bg={C.PAPER} label="D3 · Watch · 60 ticks" note="Fine — like a chronometer of capital.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -589,7 +589,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="D4 · Vinyl / coin" note="Inele concentrice subtile în interior — depth, layers, longevitate.">
+          <Card bg={C.PAPER} label="D4 · Vinyl / coin" note="Subtle concentric rings inside — depth, layers, longevity.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -601,7 +601,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.IVORY} label="D5 · Engraved (hatch fill)" note="Hatching diagonal interior — feel de gravură veche, bancnotă.">
+          <Card bg={C.IVORY} label="D5 · Engraved (hatch fill)" note="Diagonal hatching inside — old-engraving / banknote feel.">
             <ArchMark
               size={280}
               ink={C.INK_DEEP}
@@ -613,7 +613,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PLUM} label="D6 · Gold metallic" note="Boundary = bilă de aur cu radial gradient. Premium maxim.">
+          <Card bg={C.PLUM} label="D6 · Gold metallic" note="Boundary = a gold sphere with radial gradient. Maximum premium.">
             <ArchMark
               size={280}
               ink={C.PLUM}
@@ -626,7 +626,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.CREAM} label="D7 · Pearl" note="Cool gradient gri-perlat. Soft, premium, feminin (în sensul bun).">
+          <Card bg={C.CREAM} label="D7 · Pearl" note="Cool grey-pearl gradient. Soft, premium, refined.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -639,7 +639,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="D8 · Aperture" note="Petale tip diafragmă camera în jurul punctului luminos. Vision, focus.">
+          <Card bg={C.PAPER} label="D8 · Aperture" note="Camera-diaphragm petals around the focal point. Vision, focus.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -652,7 +652,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="D9 · Lens / glass (caustic)" note="Crescent luminos interior — refracție, sticlă, lens.">
+          <Card bg={C.PAPER} label="D9 · Lens / glass (caustic)" note="Bright crescent inside — refraction, glass, lens.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -680,7 +680,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.SAND} label="D11 · Globe + tick marks" note="Combo: paralele + 24 ticks (orele zilei). 'Capital across time zones.'">
+          <Card bg={C.SAND} label="D11 · Globe + tick marks" note="Combo: parallels + 24 ticks (hours of the day). 'Capital across time zones.'">
             <ArchMark
               size={280}
               ink={C.INK_DEEP}
@@ -693,7 +693,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.IVORY} label="D12 · Coin · rings + ticks" note="Inele + 12 ticks + sphere shading. Versiunea maximalistă, 'old-money coin'.">
+          <Card bg={C.IVORY} label="D12 · Coin · rings + ticks" note="Rings + 12 ticks + sphere shading. The maximalist 'old-money coin'.">
             <ArchMark
               size={280}
               ink={C.INK_DEEP}
@@ -712,9 +712,9 @@ export default function ArchPlateExplorations() {
 
       {/* ====== STACKED ====== */}
       <Section
-        label="Rafinare · 02"
+        label="Refinement · 02"
         title="Stacked lock-ups"
-        subtitle="Cu wordmark și tagline. EST. MMXXIV opțional, ca linie tehnică în JetBrains Mono."
+        subtitle="With wordmark and tagline. Optional EST. MMXXIV line in JetBrains Mono."
       >
         <Grid cols={3}>
           <Card bg={C.PAPER} label="S1 · Stacked" minH={420}>
@@ -745,9 +745,9 @@ export default function ArchPlateExplorations() {
 
       {/* ====== HORIZONTAL ====== */}
       <Section
-        label="Rafinare · 03"
+        label="Refinement · 03"
         title="Horizontal lock-ups"
-        subtitle="Pentru antet de email, header de site, semnătură."
+        subtitle="For email signatures, site headers, footers."
       >
         <Grid cols={1}>
           <Card bg={C.PAPER} label="H1 · Horizontal · Ink + Gold" minH={260}>
@@ -776,12 +776,12 @@ export default function ArchPlateExplorations() {
 
       {/* ====== WITH CONSTRUCTION ====== */}
       <Section
-        label="Rafinare · 04"
+        label="Refinement · 04"
         title="Construction variants"
-        subtitle="Cu linii de construcție, bezier handles, nodes — pentru coperta brandbook-ului, materiale interne, perete birou."
+        subtitle="With construction lines, bezier handles, nodes — for brandbook covers, internal materials, office wall art."
       >
         <Grid cols={2}>
-          <Card bg={C.PAPER} label="C1 · Light · full construction" note="Bezier handles + nodes + axe + arcs.">
+          <Card bg={C.PAPER} label="C1 · Light · full construction" note="Bezier handles + nodes + axes + arcs.">
             <ArchMark
               size={340}
               ink={C.INK_BLUE}
@@ -791,7 +791,7 @@ export default function ArchPlateExplorations() {
               showNodes
             />
           </Card>
-          <Card bg={C.SAND} label="C2 · Sand · construction + annotations" note="Cu etichete 'Pt. V (0,0,0)'.">
+          <Card bg={C.SAND} label="C2 · Sand · construction + annotations" note="With 'Pt. V (0,0,0)' style labels.">
             <ArchMark
               size={340}
               ink={C.INK_DEEP}
@@ -807,9 +807,9 @@ export default function ArchPlateExplorations() {
 
       {/* ====== THE PLATE ====== */}
       <Section
-        label="Rafinare · 05"
+        label="Refinement · 05"
         title="The full plate — framed"
-        subtitle="Placheta completă cu bordură dublă, marcaje de registrare, header, sidebar tehnic, footer. Pentru hero de site, cover de raport anual, poster pe perete."
+        subtitle="The full plate with double border, registration marks, header, technical sidebar, footer. For site heroes, annual report covers, wall posters."
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
           <div>
@@ -820,7 +820,7 @@ export default function ArchPlateExplorations() {
               sidebarPalette="cream"
             />
             <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: '#8a8578', marginTop: 10 }}>
-              P1 · Classic black on white — ca referința, 1:1
+              P1 · Classic black on white — same as the reference, 1:1
             </div>
           </div>
           <div>
@@ -832,7 +832,7 @@ export default function ArchPlateExplorations() {
               markProps={{ showBezierHandles: true, showNodes: true }}
             />
             <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: '#8a8578', marginTop: 10 }}>
-              P2 · Ink Blue-Purple + Gold · cu handles
+              P2 · Ink Blue-Purple + Gold · with bezier handles
             </div>
           </div>
           <div>
@@ -844,7 +844,7 @@ export default function ArchPlateExplorations() {
               markProps={{ showBezierHandles: true, showNodes: true, showAnnotations: true }}
             />
             <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: '#8a8578', marginTop: 10 }}>
-              P3 · Cream · cu handles + annotations
+              P3 · Cream · handles + annotations
             </div>
           </div>
           <div>
@@ -870,7 +870,7 @@ export default function ArchPlateExplorations() {
               markProps={{ showBezierHandles: true, showNodes: true }}
             />
             <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: '#8a8578', marginTop: 10 }}>
-              P5 · Plum · dark mode · pentru poster / deck cover
+              P5 · Plum · dark mode · for posters / deck covers
             </div>
           </div>
           <div>
@@ -882,7 +882,7 @@ export default function ArchPlateExplorations() {
               markProps={{ showBezierHandles: true, showNodes: true }}
             />
             <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: '#8a8578', marginTop: 10 }}>
-              P6 · Fără sidebar · format simetric
+              P6 · No sidebar · symmetric format
             </div>
           </div>
         </div>
@@ -891,8 +891,8 @@ export default function ArchPlateExplorations() {
       {/* ====== SCALE TEST ====== */}
       <Section
         label="Scale test"
-        title="Cum arată la dimensiuni diferite"
-        subtitle="De la 32px favicon până la 200px pentru business card. Rays-urile și focal node rămân lizibile."
+        title="How it reads at different sizes"
+        subtitle="From 32px favicon up to 200px for business cards. Rays and focal node remain legible."
       >
         <div style={{ display: 'flex', gap: 48, alignItems: 'flex-end', flexWrap: 'wrap', padding: 32, background: C.CREAM, borderRadius: 12 }}>
           {[32, 48, 72, 120, 200].map((s) => (
@@ -908,12 +908,12 @@ export default function ArchPlateExplorations() {
 
       {/* ====== B5 DEEP DIVE — material / lighting study ====== */}
       <Section
-        label="★★ Rafinare nouă · 09"
+        label="★★ New refinement · 09"
         title="A · Ball — material & lighting study"
-        subtitle="Aceeași bază (B5: sphere shading + highlight + shadow), explorată pe materiale și surse de lumină. 12 variante: glossy, matte, frosted, marble, pearl, backlit, top-light, side-light, halo, plus 3 palete."
+        subtitle="Same base (B5: sphere shading + highlight + shadow), explored across materials and light sources. 12 variants: glossy, matte, frosted, marble, pearl, backlit, top-light, side-light, halo, plus 3 palettes."
       >
         <Grid cols={3}>
-          <Card bg={C.PAPER} label="A1 · B5 baseline" note="Punctul de pornire — pentru comparație.">
+          <Card bg={C.PAPER} label="A1 · B5 baseline" note="Starting point — for comparison.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -927,7 +927,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A2 · Glossy lacquer" note="Highlight mai mic, mai intens, mai sus — bilă lăcuită.">
+          <Card bg={C.PAPER} label="A2 · Glossy lacquer" note="Smaller, sharper, higher highlight — a lacquered ball.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -946,7 +946,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A3 · Matte / chalky" note="Fără highlight, gradient delicat — bilă mată din ceramică.">
+          <Card bg={C.PAPER} label="A3 · Matte / chalky" note="No highlight, soft gradient — a matte ceramic ball.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -961,7 +961,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A4 · Frosted glass" note="Highlight mare și difuz, gradient ușor — bilă mată-translucentă.">
+          <Card bg={C.PAPER} label="A4 · Frosted glass" note="Large diffuse highlight, soft gradient — frosted translucent ball.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -981,7 +981,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.CREAM} label="A5 · Marble / agate" note="Gradient mai dramatic, edge mai gros — masă, materialitate.">
+          <Card bg={C.CREAM} label="A5 · Marble / agate" note="More dramatic gradient, thicker edge — mass and materiality.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1001,7 +1001,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A6 · Pearl (cool gradient)" note="Pearl finish — soft, premium, feminine în sensul bun.">
+          <Card bg={C.PAPER} label="A6 · Pearl (cool gradient)" note="Pearl finish — soft, premium, refined.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1019,7 +1019,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PLUM} label="A7 · Backlit (rim light)" note="Lumină din spate — crescent luminos pe marginea opusă.">
+          <Card bg={C.PLUM} label="A7 · Backlit (rim light)" note="Light from behind — bright crescent on the far edge.">
             <ArchMark
               size={280}
               ink={C.IVORY}
@@ -1037,7 +1037,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A8 · Top-light" note="Highlight pe sus-centru — sursa de lumină verticală.">
+          <Card bg={C.PAPER} label="A8 · Top-light" note="Highlight at top-center — vertical light source.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1057,7 +1057,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A9 · Side-light (drama)" note="Lumina vine din dreapta — umbra pe stânga, contrast mai dramatic.">
+          <Card bg={C.PAPER} label="A9 · Side-light (drama)" note="Light from the right — shadow on the left, more dramatic contrast.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1079,7 +1079,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PLUM} label="A10 · Outer glow halo" note="Halou auriu difuz în jurul bilei — sens 'corp celest'.">
+          <Card bg={C.PLUM} label="A10 · Outer glow halo" note="Soft gold halo around the ball — reads as a celestial body.">
             <ArchMark
               size={280}
               ink={C.IVORY}
@@ -1096,7 +1096,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.IVORY} label="A11 · Royal Purple variant" note="Pe Royal Purple, gradient mai cald.">
+          <Card bg={C.IVORY} label="A11 · Royal Purple variant" note="On Royal Purple, with a warmer gradient.">
             <ArchMark
               size={280}
               ink={C.INK_DEEP}
@@ -1113,7 +1113,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.SAND} label="A12 · Sand · earthen ball" note="Pe sand cu terracotta accent — bilă terra-cotta.">
+          <Card bg={C.SAND} label="A12 · Sand · earthen ball" note="On sand with terracotta accent — a terra-cotta ball.">
             <ArchMark
               size={280}
               ink={C.INK_DEEP}
@@ -1132,12 +1132,12 @@ export default function ArchPlateExplorations() {
 
       {/* ====== B5 + composition modifiers ====== */}
       <Section
-        label="★★ Rafinare nouă · 10"
+        label="★★ New refinement · 10"
         title="A · Ball — composition modifiers"
-        subtitle="Bila plus elemente: ticks subtile, rings interior, equator, caustic, aperture. Gradient menținut, dar adaugă detaliu."
+        subtitle="The ball plus extras: subtle ticks, inner rings, equator, caustic, aperture. Gradient kept, but adds detail."
       >
         <Grid cols={3}>
-          <Card bg={C.PAPER} label="A13 · Ball + 12 ticks subtle" note="Watch face inserat în bilă — instrument premium.">
+          <Card bg={C.PAPER} label="A13 · Ball + 12 subtle ticks" note="Watch face inset into the ball — premium instrument.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1152,7 +1152,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A14 · Ball + inner ring" note="Un singur inel concentric — depth fără să fie agitat.">
+          <Card bg={C.PAPER} label="A14 · Ball + inner ring" note="A single concentric ring — depth without busy-ness.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1167,7 +1167,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A15 · Ball + equator" note="Doar linia equator — sens de hemisferă, glob simplu.">
+          <Card bg={C.PAPER} label="A15 · Ball + equator" note="Just the equator line — hemisphere feel, a simple globe.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1182,7 +1182,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A16 · Ball + caustic" note="Crescent luminos interior — refracție de sticlă.">
+          <Card bg={C.PAPER} label="A16 · Ball + caustic" note="Bright crescent inside — glass refraction.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1197,7 +1197,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A17 · Ball + aperture" note="Petale tip diafragmă în jurul punctului — focus.">
+          <Card bg={C.PAPER} label="A17 · Ball + aperture" note="Diaphragm petals around the point — focus.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1213,7 +1213,7 @@ export default function ArchPlateExplorations() {
             />
           </Card>
 
-          <Card bg={C.PAPER} label="A18 · Ball + V triangle masă" note="V plin la 8% — V devine forma dominantă.">
+          <Card bg={C.PAPER} label="A18 · Ball + V triangle mass" note="V filled at 8% — V becomes the dominant shape.">
             <ArchMark
               size={280}
               ink={C.INK_BLUE}
@@ -1233,9 +1233,9 @@ export default function ArchPlateExplorations() {
 
       {/* ====== Print survival of B5 family ====== */}
       <Section
-        label="★★ Rafinare nouă · 11"
+        label="★★ New refinement · 11"
         title="A · Ball — print survival"
-        subtitle="Pentru ca ai zis că printul contează: aceleași 6 variante de top din A, în 3 modi de print (two-tone, single-color, black). Vezi care supraviețuiește."
+        subtitle="Print matters: the same six top A variants, rendered in three print modes (two-tone, single-color, black). See which one survives."
       >
         <Grid cols={3}>
           {[
@@ -1305,8 +1305,8 @@ export default function ArchPlateExplorations() {
       <ArchPlateApplications />
 
       <footer style={{ padding: '64px 56px 0', color: '#8a8578', fontSize: 13, letterSpacing: 2, textTransform: 'uppercase', lineHeight: 1.8 }}>
-        Direcție nouă. Vibe <strong style={{ color: '#1a1a1a' }}>drafting plate / engineering manual</strong>.
-        Spune-mi care variantă te-a prins — rafinez mai departe, integrez în brandbook sau construiesc exporturi.
+        New direction. Vibe: <strong style={{ color: '#1a1a1a' }}>drafting plate / engineering manual</strong>.
+        Pick a variant — we refine further, integrate it into the brandbook, or generate exports.
       </footer>
     </div>
   )
