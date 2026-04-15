@@ -15,20 +15,23 @@ const S2 = new THREE.CubicBezierCurve3(svgTo3D(350, 300), svgTo3D(500, 450), svg
 // Each line is a noisy short segment near a sampled point on the A15 geometry.
 // -----------------------------------------------------------------------------
 
-function buildA15Wireframe(numLines = 14000) {
+function buildA15Wireframe(numLines = 16000) {
   const positions = new Float32Array(numLines * 2 * 3) // 2 endpoints per line
   let i = 0
   const push = (x, y, z) => { positions[i++] = x; positions[i++] = y; positions[i++] = z }
 
-  // distribution weights
+  // Distribution weights — V, S, equator, focal pushed up so every logo element reads.
   const weights = {
-    boundary: 0.18,    // visible silhouette ring
-    sphereSurf: 0.22,  // 3D sphere wireframe scatter
-    equator: 0.10,
-    vLeft: 0.13,
-    vRight: 0.13,
-    sCurve: 0.18,
-    halo: 0.06,        // outer halo around the sphere
+    boundary: 0.17,    // visible silhouette ring (front-facing circle)
+    sphereSurf: 0.10,  // 3D sphere wireframe scatter — reduced, so V/S aren't obscured
+    meridian: 0.04,    // vertical great circle (3D hint)
+    tilted: 0.04,      // tilted great circle
+    equator: 0.10,     // horizontal equator (the A15 horizon)
+    vLeft: 0.16,       // V left leg — more prominent
+    vRight: 0.16,      // V right leg — more prominent
+    sCurve: 0.17,      // S bezier — more prominent
+    focalRing: 0.03,   // bright ring around the V vertex
+    halo: 0.03,        // outer halo around the sphere
   }
   const counts = Object.fromEntries(Object.entries(weights).map(([k, v]) => [k, Math.floor(numLines * v)]))
 
@@ -49,7 +52,7 @@ function buildA15Wireframe(numLines = 14000) {
     emitLine(cx, cy, 0, -Math.sin(theta), Math.cos(theta), (Math.random() - 0.5) * 0.5)
   }
 
-  // 2) Sphere surface — 3D wireframe random points
+  // 2) Sphere surface scatter — sparse 3D depth
   for (let n = 0; n < counts.sphereSurf; n++) {
     const u = Math.random(), v = Math.random()
     const theta = 2 * Math.PI * u
@@ -57,17 +60,33 @@ function buildA15Wireframe(numLines = 14000) {
     const sx = SPHERE_R * Math.sin(phi) * Math.cos(theta)
     const sy = SPHERE_R * Math.sin(phi) * Math.sin(theta)
     const sz = SPHERE_R * Math.cos(phi)
-    // tangent direction along the sphere surface
     const dx = -Math.sin(theta), dy = Math.cos(theta), dz = (Math.random() - 0.5) * 0.4
     emitLine(sx, sy, sz, dx, dy, dz, 0.005, 0.04)
   }
 
-  // 3) Equator (XZ plane)
+  // 2b) Meridian — vertical great circle (gives 3D depth to the sphere)
+  for (let n = 0; n < counts.meridian; n++) {
+    const theta = Math.random() * Math.PI * 2
+    const cy = Math.sin(theta) * SPHERE_R
+    const cz = Math.cos(theta) * SPHERE_R
+    emitLine(0, cy, cz, 0, Math.cos(theta), -Math.sin(theta), 0.01, 0.04)
+  }
+
+  // 2c) Tilted great circle — another 3D hint
+  for (let n = 0; n < counts.tilted; n++) {
+    const theta = Math.random() * Math.PI * 2
+    const cx = Math.cos(theta) * SPHERE_R * 0.7
+    const cy = Math.sin(theta) * SPHERE_R * 0.95
+    const cz = Math.cos(theta) * SPHERE_R * 0.6
+    emitLine(cx, cy, cz, -Math.sin(theta), Math.cos(theta), 0, 0.01, 0.04)
+  }
+
+  // 3) Equator (XZ plane) — the A15 horizon — dense & flat
   for (let n = 0; n < counts.equator; n++) {
     const theta = Math.random() * Math.PI * 2
     const cx = Math.cos(theta) * SPHERE_R * 0.99
     const cz = Math.sin(theta) * SPHERE_R * 0.99
-    emitLine(cx, 0, cz, -Math.sin(theta), 0, Math.cos(theta), 0.012, 0.05)
+    emitLine(cx, (Math.random() - 0.5) * 0.015, cz, -Math.sin(theta), 0, Math.cos(theta), 0.015, 0.05)
   }
 
   // 4) V left + right legs
@@ -93,7 +112,17 @@ function buildA15Wireframe(numLines = 14000) {
     emitLine(p.x + (Math.random() - 0.5) * 0.012, p.y + (Math.random() - 0.5) * 0.012, p.z + (Math.random() - 0.5) * 0.025, tan.x, tan.y, tan.z, 0.012, 0.05)
   }
 
-  // 6) Halo around the sphere — slightly outside, sparse
+  // 6) Focal ring — dense halo of short lines around the V vertex
+  for (let n = 0; n < counts.focalRing; n++) {
+    const theta = Math.random() * Math.PI * 2
+    const r = 0.05 + Math.random() * 0.12
+    const cx = VERTEX.x + Math.cos(theta) * r
+    const cy = VERTEX.y + Math.sin(theta) * r
+    const cz = (Math.random() - 0.5) * 0.05
+    emitLine(cx, cy, cz, -Math.sin(theta), Math.cos(theta), 0, 0.008, 0.022)
+  }
+
+  // 7) Outer halo around the sphere — sparse, faint
   for (let n = 0; n < counts.halo; n++) {
     const theta = Math.random() * Math.PI * 2
     const r = SPHERE_R + 0.04 + Math.random() * 0.18
@@ -125,7 +154,7 @@ export default function LandingSgnl() {
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100)
     camera.position.set(0, 0, 4.2)
 
-    const positions = buildA15Wireframe(15000)
+    const positions = buildA15Wireframe(18000)
     const geometry = new THREE.BufferGeometry()
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
@@ -239,11 +268,11 @@ export default function LandingSgnl() {
       fontSize: 11,
       WebkitFontSmoothing: 'antialiased',
     }}>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=JetBrains+Mono:wght@300;400;500&display=swap" />
 
       <div ref={containerRef} style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }} />
 
-      {/* Premium wordmark — bottom center, only text on screen */}
+      {/* Premium wordmark — Bodoni Moda, bottom center, only text on screen */}
       <div style={{
         position: 'absolute',
         bottom: '8%',
@@ -252,23 +281,24 @@ export default function LandingSgnl() {
         zIndex: 10,
         pointerEvents: 'none',
         textAlign: 'center',
-        color: 'rgba(255,255,255,0.92)',
-        textShadow: '0 0 30px rgba(0,0,0,0.7)',
+        color: 'rgba(255,255,255,0.95)',
+        textShadow: '0 0 30px rgba(0,0,0,0.75)',
       }}>
         <div style={{
-          fontFamily: "'EB Garamond', serif",
+          fontFamily: "'Bodoni Moda', 'Didot', serif",
           fontWeight: 400,
           fontStyle: 'italic',
-          fontSize: 'clamp(1.4rem, 1.9vw, 2rem)',
-          letterSpacing: '0.32em',
+          fontSize: 'clamp(1.6rem, 2.4vw, 2.6rem)',
+          letterSpacing: '0.28em',
           lineHeight: 1,
           textTransform: 'lowercase',
+          fontVariationSettings: '"opsz" 96',
         }}>swish ventures</div>
         <div style={{
-          width: 36,
+          width: 42,
           height: 1,
-          background: 'rgba(255,255,255,0.35)',
-          margin: '20px auto 0',
+          background: 'rgba(255,255,255,0.38)',
+          margin: '22px auto 0',
         }} />
       </div>
     </div>

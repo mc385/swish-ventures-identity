@@ -13,7 +13,6 @@ import A15Brandbook from './a15brandbook/A15Brandbook.jsx'
 import LandingA15 from './landing/LandingA15.jsx'
 import LandingLiquid from './landing2/LandingLiquid.jsx'
 import LandingSgnl from './landing3/LandingSgnl.jsx'
-import LandingPixel from './landing4/LandingPixel.jsx'
 import A15Mono from './a15mono/A15Mono.jsx'
 
 // Brand colors
@@ -111,7 +110,6 @@ export default function App() {
                 ['landing', '✦ Landing'],
                 ['landing2', '✦ Liquid'],
                 ['landing3', '✦ Sgnl'],
-                ['landing4', '✦ Pixel'],
                 ['a15mono', '★ Mono Brandbook'],
                 ['a15book', 'A15 Brandbook'],
                 ['top5', 'Top 5'],
@@ -121,7 +119,6 @@ export default function App() {
                 ['landing', '✦ Landing'],
                 ['landing2', '✦ Liquid'],
                 ['landing3', '✦ Sgnl'],
-                ['landing4', '✦ Pixel'],
                 ['a15mono', '★ Mono Brandbook'],
                 ['a15book', 'A15 Brandbook'],
                 ['top5', 'Top 5'],
@@ -157,7 +154,6 @@ export default function App() {
       {view === 'landing' && <LandingA15 />}
       {view === 'landing2' && <LandingLiquid />}
       {view === 'landing3' && <LandingSgnl />}
-      {view === 'landing4' && <LandingPixel />}
       {view === 'a15mono' && <A15Mono />}
       {view === 'a15book' && <A15Brandbook />}
       {view === 'top5' && <Top5 />}
